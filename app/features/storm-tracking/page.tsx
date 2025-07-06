@@ -10,7 +10,7 @@ import {
   FiTrendingUp,
   FiUsers,
   FiTarget,
-  FiBarChart3,
+  FiBarChart,
   FiCalendar,
   FiAlertTriangle,
   FiCheckCircle,

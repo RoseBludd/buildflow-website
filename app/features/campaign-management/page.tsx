@@ -8,7 +8,7 @@ import {
   FiTarget,
   FiMail,
   FiMessageSquare,
-  FiBarChart3,
+  FiBarChart,
   FiCalendar,
   FiUsers,
   FiTrendingUp,
@@ -55,7 +55,7 @@ export default function CampaignManagementPage() {
       ],
     },
     {
-      icon: <FiBarChart3 className="w-8 h-8" />,
+      icon: <FiBarChart className="w-8 h-8" />,
       title: "A/B Testing Suite",
       description:
         "Statistical analysis with confidence intervals and automated winner selection",
@@ -177,7 +177,7 @@ export default function CampaignManagementPage() {
       step: "4",
       title: "Track Performance",
       description: "Monitor results and optimize for better ROI",
-      icon: <FiBarChart3 className="w-6 h-6" />,
+      icon: <FiBarChart className="w-6 h-6" />,
     },
   ];
 

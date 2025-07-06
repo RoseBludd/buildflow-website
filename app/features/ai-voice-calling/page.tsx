@@ -12,7 +12,7 @@ import {
   FiMic,
   FiSettings,
   FiTarget,
-  FiBarChart3,
+  FiBarChart,
   FiPlayCircle,
   FiCheckCircle,
   FiArrowRight,
@@ -73,7 +73,7 @@ export default function AIVoiceCallingPage() {
       ],
     },
     {
-      icon: <FiBarChart3 className="w-8 h-8" />,
+      icon: <FiBarChart className="w-8 h-8" />,
       title: "Performance Analytics",
       description:
         "Comprehensive call analytics and performance optimization insights",

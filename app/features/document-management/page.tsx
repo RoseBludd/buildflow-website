@@ -10,7 +10,7 @@ import {
   FiSend,
   FiCheckCircle,
   FiEye,
-  FiBarChart3,
+  FiBarChart,
   FiSettings,
   FiClock,
   FiUsers,
@@ -79,7 +79,7 @@ export default function DocumentManagementPage() {
       ],
     },
     {
-      icon: <FiBarChart3 className="w-8 h-8" />,
+      icon: <FiBarChart className="w-8 h-8" />,
       title: "Analytics Dashboard",
       description:
         "Comprehensive document performance analytics and usage insights",
