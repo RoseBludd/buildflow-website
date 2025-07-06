@@ -11,21 +11,15 @@ import {
   FiCheckCircle,
   FiEye,
   FiBarChart,
-  FiSettings,
   FiClock,
   FiUsers,
-  FiDownload,
   FiMail,
   FiPlayCircle,
   FiArrowRight,
   FiPenTool,
   FiFolder,
   FiTarget,
-  FiTrendingUp,
   FiShield,
-  FiSmartphone,
-  FiCalendar,
-  FiAlertCircle,
 } from "react-icons/fi";
 
 export default function DocumentManagementPage() {

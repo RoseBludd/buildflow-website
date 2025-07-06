@@ -7,7 +7,6 @@ import {
   FiDollarSign,
   FiCheckSquare,
   FiUsers,
-  FiSettings,
 } from "react-icons/fi";
 
 export default function VendorManagementPage() {
@@ -1164,7 +1163,7 @@ export default function VendorManagementPage() {
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 See how businesses are transforming their subcontractor
-                management with BuildFlow's Vendor Management system.
+                management with BuildFlow&apos;s Vendor Management system.
               </p>
             </div>
 

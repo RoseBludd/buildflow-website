@@ -15,9 +15,7 @@ import {
   FiAlertCircle,
   FiPlayCircle,
   FiArrowRight,
-  FiCalendar,
   FiMail,
-  FiSmartphone,
   FiDatabase,
 } from "react-icons/fi";
 

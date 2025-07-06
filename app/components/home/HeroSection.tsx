@@ -213,31 +213,34 @@ export default function HeroSection() {
   // Map instances reference for Google Maps API
   const mapRef = useRef<GoogleMapInstance | null>(null);
 
-  const onMapLoad = useCallback((map: GoogleMapInstance) => {
-    // Store reference to map
-    mapRef.current = map;
+  const onMapLoad = useCallback(
+    (map: GoogleMapInstance) => {
+      // Store reference to map
+      mapRef.current = map;
 
-    // Optimize map settings after loading
-    map.setOptions({
-      maxZoom: 6,
-      minZoom: 4,
-    });
+      // Optimize map settings after loading
+      map.setOptions({
+        maxZoom: 6,
+        minZoom: 4,
+      });
 
-    // Fit to bounds with padding immediately - add less padding for better visibility
-    const bounds = new google.maps.LatLngBounds();
-    stormPath.forEach((point) =>
-      bounds.extend(new google.maps.LatLng(point.lat, point.lng))
-    );
+      // Fit to bounds with padding immediately - add less padding for better visibility
+      const bounds = new google.maps.LatLngBounds();
+      stormPath.forEach((point) =>
+        bounds.extend(new google.maps.LatLng(point.lat, point.lng))
+      );
 
-    // Add padding to show more context around the path
-    bounds.extend(new google.maps.LatLng(28.0, -100.0)); // Southwest padding
-    bounds.extend(new google.maps.LatLng(36.0, -75.0)); // Northeast padding
+      // Add padding to show more context around the path
+      bounds.extend(new google.maps.LatLng(28.0, -100.0)); // Southwest padding
+      bounds.extend(new google.maps.LatLng(36.0, -75.0)); // Northeast padding
 
-    map.fitBounds(bounds, 20);
+      map.fitBounds(bounds, 20);
 
-    // Disable unnecessary map features for better performance
-    map.setTilt(0);
-  }, []);
+      // Disable unnecessary map features for better performance
+      map.setTilt(0);
+    },
+    [stormPath]
+  );
 
   const onMapUnmount = useCallback(() => {
     mapRef.current = null;
@@ -270,7 +273,7 @@ export default function HeroSection() {
         cancelAnimationFrame(animationFrameId);
       };
     }
-  }, [isLoaded, loadError, isClient]);
+  }, [isLoaded, loadError, isClient, stormPath.length]);
 
   // Memoize the current storm position to prevent recalculations
   const currentStormPosition = useCallback(() => {
@@ -287,7 +290,7 @@ export default function HeroSection() {
         stormPath[index].lng +
         (stormPath[index + 1].lng - stormPath[index].lng) * remainder,
     };
-  }, [stormPosition]);
+  }, [stormPosition, stormPath]);
 
   // Memoize map to prevent re-renders
   const memoizedMap = useCallback(() => {
@@ -379,6 +382,12 @@ export default function HeroSection() {
     onMapLoad,
     onMapUnmount,
     isClient,
+    currentStormPosition,
+    mapOptions,
+    stormOptions,
+    stormRadius,
+    impactOptions,
+    impactRadius,
   ]);
 
   // Render the actual map only once loaded

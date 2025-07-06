@@ -10,7 +10,6 @@ import {
   FiTrendingUp,
   FiClock,
   FiMic,
-  FiSettings,
   FiTarget,
   FiBarChart,
   FiPlayCircle,
@@ -19,7 +18,6 @@ import {
   FiHeadphones,
   FiMessageSquare,
   FiCalendar,
-  FiCloud,
 } from "react-icons/fi";
 
 export default function AIVoiceCallingPage() {

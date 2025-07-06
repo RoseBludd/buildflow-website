@@ -7,7 +7,6 @@ import Footer from "../../components/Footer";
 import {
   FiSearch,
   FiPhone,
-  FiMail,
   FiMapPin,
   FiUsers,
   FiDownload,
@@ -21,9 +20,7 @@ import {
   FiShield,
   FiTrendingUp,
   FiFileText,
-  FiSettings,
   FiHome,
-  FiFilter,
 } from "react-icons/fi";
 
 export default function PropertyContactFinderPage() {
@@ -209,9 +206,9 @@ export default function PropertyContactFinderPage() {
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Automatically find property owner contact information for
-                targeted outreach. Connect with PropertyRadar's comprehensive
-                database to find phone numbers and emails for any property
-                address.
+                targeted outreach. Connect with PropertyRadar&apos;s
+                comprehensive database to find phone numbers and emails for any
+                property address.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/demo" className="btn btn-primary">

@@ -730,10 +730,11 @@ export default function DemoPage() {
                   ))}
                 </div>
                 <blockquote className="text-xl text-gray-300 mb-6">
-                  "BuildFlow completely transformed how we handle storm leads.
-                  We&apos;re now getting 3x more qualified leads and our team
-                  saves 40 hours per week on administrative tasks. The AI voice
-                  calling feature alone pays for the entire platform."
+                  &quot;BuildFlow completely transformed how we handle storm
+                  leads. We&apos;re now getting 3x more qualified leads and our
+                  team saves 40 hours per week on administrative tasks. The AI
+                  voice calling feature alone pays for the entire
+                  platform.&quot;
                 </blockquote>
                 <div className="flex items-center justify-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">

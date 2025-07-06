@@ -22,17 +22,9 @@ import {
   FiCloudRain,
   FiSearch,
   FiMap,
-  FiVideo,
-  FiMail,
-  FiShield,
-  FiSettings,
   FiTrendingUp,
-  FiCalendar,
   FiUsers as FiTeam,
-  FiSmartphone,
-  FiCloud,
   FiCamera,
-  FiHeadphones,
   FiCheckCircle,
   FiArrowRight,
 } from "react-icons/fi";
@@ -249,7 +241,7 @@ export default function FeaturesPage() {
             </h1>
             <p className="text-xl text-gray-300 mb-8">
               Everything your storm restoration company needs in one powerful
-              platform. Replace dozens of tools with BuildFlow's integrated
+              platform. Replace dozens of tools with BuildFlow&apos;s integrated
               AI-powered system.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

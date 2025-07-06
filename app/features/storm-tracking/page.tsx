@@ -10,22 +10,16 @@ import {
   FiTrendingUp,
   FiUsers,
   FiTarget,
-  FiBarChart,
-  FiCalendar,
   FiAlertTriangle,
   FiCheckCircle,
   FiPlayCircle,
   FiArrowRight,
   FiEye,
-  FiNavigation,
   FiHome,
   FiClock,
   FiActivity,
-  FiFilter,
   FiDatabase,
   FiSend,
-  FiPhone,
-  FiSettings,
 } from "react-icons/fi";
 
 export default function StormTrackingPage() {

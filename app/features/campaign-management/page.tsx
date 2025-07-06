@@ -12,7 +12,6 @@ import {
   FiCalendar,
   FiUsers,
   FiTrendingUp,
-  FiSettings,
   FiCheckCircle,
   FiPlayCircle,
   FiArrowRight,
@@ -22,10 +21,7 @@ import {
   FiEye,
   FiSend,
   FiEdit3,
-  FiFilter,
-  FiClock,
   FiAward,
-  FiSmartphone,
 } from "react-icons/fi";
 
 export default function CampaignManagementPage() {
