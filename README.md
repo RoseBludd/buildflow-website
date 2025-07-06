@@ -1,49 +1,352 @@
-# BuildFlow Website
+# BuildFlow - Storm Restoration Management Platform
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+**Built by Roofers, for Roofers** 🏠⚡
 
-## Getting Started
+BuildFlow is the most advanced AI-powered storm restoration management platform in the industry. Founded by industry veterans with 15+ years of roofing experience, we combine deep industry knowledge with cutting-edge technology to help restoration companies streamline operations, increase revenue, and focus on what they do best - helping communities recover.
 
-First, run the development server:
+## 🚀 Key Statistics
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **15+ Years** in Roofing Industry Experience
+- **10,000+** Projects Completed
+- **500+** Companies Served
+- **40 Hours/Week** Time Saved per Company
+- **245%** Average Revenue Increase
+- **75%** Reduction in Administrative Time
+
+## 🛠️ Technology Stack
+
+### Frontend
+
+- **Next.js 15.3** - React framework with App Router
+- **React 19** - Latest React with concurrent features
+- **TypeScript 5** - Type-safe development
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **Framer Motion 12.7** - Advanced animations and transitions
+
+### APIs & Integrations
+
+- **Google Maps API** - Storm tracking and property visualization
+- **React Icons 5.5** - Comprehensive icon library
+- **Heroicons 2.2** - Beautiful hand-crafted SVG icons
+
+### Development Tools
+
+- **ESLint 9** - Code linting with Next.js config
+- **PostCSS** - CSS processing
+- **Turbopack** - Ultra-fast bundling for development
+
+## 📋 Features Overview
+
+BuildFlow organizes all your business needs into **6 comprehensive categories**, each designed to work seamlessly with the others:
+
+### 🎯 Lead Generation & Acquisition
+
+Transform weather events into targeted business opportunities with AI-powered precision.
+
+- **[Storm Lead Engine](app/features/storm-lead-engine)** - Automatically identify leads in storm-affected areas using AI damage detection
+- **[AI Voice Calling System](app/features/ai-voice-calling)** - Automated outreach with realistic AI voices for lead qualification
+- **[Property Contact Finder](app/features/property-contact-finder)** - Automatically find property owner contact information
+- **[Storm Tracking](app/features/storm-tracking)** - Real-time storm monitoring and lead generation from weather events
+
+### 📊 Sales & Pipeline Management
+
+Convert leads to customers with streamlined sales processes.
+
+- **[Sales Pipeline](app/features/sales-pipeline)** - Visual pipeline management with automated follow-up sequences
+- **[Campaign Management](app/features/campaign-management)** - Multi-channel marketing campaigns with automated storm response
+- **[AI Estimator](app/features/ai-estimator)** - Intelligent cost estimation and proposal generation
+- **[Document Management](app/features/document-management)** - Create, send, sign, and track all sales documents
+
+### 💬 Communication & Collaboration
+
+Keep teams and customers connected throughout projects.
+
+- **[Unified Messaging](app/features/unified-messaging)** - SMS, email, and in-app messaging in one platform
+- **[Customer Portal](app/features/customer-portal)** - Self-service portal for project tracking and payments
+- **Team Collaboration** - Internal messaging with job tagging and notifications
+
+### 🔧 Field Operations & Inspections
+
+Streamline field work with mobile-first tools.
+
+- **[Field Inspector App](app/features/field-inspector)** - Mobile property inspection with photo documentation
+- **[Image Analyzer](app/features/image-analyzer)** - AI-powered damage detection and material estimation
+- **[GPS Time Tracking](app/features/gps-time-tracking)** - Location-verified time tracking for field workers
+
+### 📁 Project & Job Management
+
+Manage projects from start to finish with complete oversight.
+
+- **[Job Management](app/features/job-management)** - End-to-end job management with scheduling and tracking
+- **[Change Orders System](app/features/change-orders)** - Streamlined change order management with approvals
+- **[Vendor Management](app/features/vendor-management)** - Subcontractor scheduling, payments, and performance tracking
+
+### 📈 Analytics & Business Intelligence
+
+Data-driven insights for better decision making.
+
+- **[AI Dashboard Notifier](app/features/dashboard-notifier)** - Natural language reporting with automated delivery
+- **Performance Analytics** - Comprehensive business metrics and KPI tracking
+
+## 💰 Pricing Models
+
+BuildFlow offers **5 flexible pricing strategies** to match your business model:
+
+### 👥 Per User Pricing
+
+Traditional per-seat pricing for predictable monthly costs.
+
+- **Starter**: $99/user/month (up to 5 users)
+- **Professional**: $199/user/month (up to 25 users) - _Most Popular_
+- **Enterprise**: $399/user/month (unlimited users)
+
+### 🎯 Per Lead Pricing
+
+Pay only for qualified leads generated by our system.
+
+- **Pay Per Lead**: $25/qualified lead
+- **Lead + Platform**: $15/lead + $199/month base - _Most Popular_
+- **Lead Premium**: $8/lead + $499/month base
+
+### 📈 Revenue Share Pricing
+
+We succeed when you succeed - percentage of revenue generated.
+
+- **Growth Partner**: 3% of generated revenue
+- **Scale Partner**: 2% of generated revenue - _Most Popular_
+- **Enterprise Partner**: 1.5% of generated revenue
+
+### ⚡ Usage-Based Pricing
+
+Pay only for what you use - perfect for seasonal businesses.
+
+- **Flex**: $49 base + usage fees
+- **Flex Pro**: $199 base + reduced usage fees - _Most Popular_
+- **Flex Enterprise**: $499 base + lowest usage fees
+
+### 🏢 Enterprise Pricing
+
+Custom solutions and strategic partnerships.
+
+- **Custom Solution**: Tailored pricing
+- **Industry Partnership**: Revenue share or licensing - _Most Popular_
+
+## 🏗️ Project Structure
+
+```
+buildflow-website/
+├── app/                          # Next.js App Router
+│   ├── components/              # Reusable UI components
+│   │   ├── Header.tsx          # Navigation header
+│   │   ├── Footer.tsx          # Site footer
+│   │   └── home/               # Homepage components
+│   │       ├── HeroSection.tsx        # Hero with interactive storm map
+│   │       ├── ProblemSection.tsx     # Problem identification
+│   │       ├── FeaturesOverview.tsx   # Feature highlights
+│   │       ├── VibezsTechSection.tsx  # Technology showcase
+│   │       ├── TestimonialSection.tsx # Customer testimonials
+│   │       └── CTASection.tsx         # Call-to-action
+│   ├── features/               # Feature detail pages
+│   │   ├── page.tsx           # Features overview
+│   │   ├── storm-lead-engine/  # AI-powered lead generation
+│   │   ├── ai-voice-calling/   # Automated calling system
+│   │   ├── storm-tracking/     # Real-time storm monitoring
+│   │   ├── sales-pipeline/     # Sales management
+│   │   ├── campaign-management/ # Marketing campaigns
+│   │   ├── ai-estimator/       # Cost estimation
+│   │   ├── document-management/ # Document handling
+│   │   ├── unified-messaging/  # Communication hub
+│   │   ├── customer-portal/    # Customer self-service
+│   │   ├── field-inspector/    # Mobile inspection app
+│   │   ├── image-analyzer/     # AI damage detection
+│   │   ├── gps-time-tracking/  # Location tracking
+│   │   ├── job-management/     # Project management
+│   │   ├── change-orders/      # Change order system
+│   │   ├── vendor-management/  # Subcontractor management
+│   │   ├── dashboard-notifier/ # AI reporting
+│   │   └── property-contact-finder/ # Contact discovery
+│   ├── pricing/               # Pricing page with 5 models
+│   ├── about/                 # Company information
+│   ├── contact/               # Contact form
+│   ├── demo/                  # Demo request
+│   ├── page.tsx              # Homepage
+│   ├── layout.tsx            # Root layout
+│   └── globals.css           # Global styles
+├── public/                    # Static assets
+└── package.json              # Dependencies and scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 18+
+- npm/yarn/pnpm/bun
+- Google Maps API key (for storm tracking features)
 
-## Environment Setup
+### Installation
 
-### Google Maps API
+1. **Clone the repository**
 
-This project uses the Google Maps API to display storm tracking information. To set up:
+   ```bash
+   git clone <repository-url>
+   cd buildflow-website
+   ```
 
-1. Create an API key in the [Google Cloud Console](https://console.cloud.google.com/google/maps-apis/)
-2. Enable the "Maps JavaScript API" service
-3. Create a `.env.local` file in the root directory of the project
-4. Add your API key: `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_api_key_here`
+2. **Install dependencies**
 
-## Learn More
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Set up environment variables**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   # Create .env.local file
+   cp .env.example .env.local
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   Add your Google Maps API key:
 
-## Deploy on Vercel
+   ```env
+   NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_api_key_here
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Run the development server**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
+
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Google Maps API Setup
+
+The storm tracking features require a Google Maps API key:
+
+1. Go to [Google Cloud Console](https://console.cloud.google.com/google/maps-apis/)
+2. Create a new project or select an existing one
+3. Enable the "Maps JavaScript API" service
+4. Create an API key
+5. Add the key to your `.env.local` file
+
+## 🎨 Design Philosophy
+
+### Built by Industry Veterans
+
+- **15+ years** of hands-on roofing experience
+- Real contractors who understand your daily challenges
+- Every feature designed to solve actual problems
+
+### AI-Powered Intelligence
+
+- Cutting-edge AI technology combined with industry expertise
+- Intelligent automation that actually works for contractors
+- Machine learning that improves with your business
+
+### Industry-First Innovation
+
+- We don't just digitize old processes - we reimagine them
+- Modern technology designed for storm restoration workflow
+- Comprehensive platform that replaces dozens of tools
+
+### Proven Results
+
+- **245%** average revenue increase
+- **75%** reduction in administrative time
+- **500+** companies already using BuildFlow
+
+## 🔧 Development Scripts
+
+```bash
+# Development with Turbopack (ultra-fast)
+npm run dev
+
+# Production build
+npm run build
+
+# Start production server
+npm run start
+
+# Run ESLint
+npm run lint
+```
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+The easiest way to deploy BuildFlow is using [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme):
+
+1. Connect your GitHub repository
+2. Add environment variables
+3. Deploy with zero configuration
+
+### Other Platforms
+
+BuildFlow can be deployed on any platform that supports Next.js:
+
+- Netlify
+- AWS Amplify
+- Railway
+- Render
+
+## 📞 Support & Contact
+
+- **Website**: [buildflow.com](https://buildflow.com)
+- **Demo**: [Schedule a Demo](https://buildflow.com/demo)
+- **Pricing**: [View All Pricing Options](https://buildflow.com/pricing)
+- **Features**: [Explore All Features](https://buildflow.com/features)
+
+## 🏆 Why Choose BuildFlow?
+
+### For Small Teams (1-5 people)
+
+- **Starter Plan**: $99/user/month
+- Get started with essential features
+- Perfect for new restoration companies
+
+### For Growing Companies (6-25 people)
+
+- **Professional Plan**: $199/user/month ⭐ _Most Popular_
+- Full feature set with AI capabilities
+- Dedicated support and training
+
+### For Large Operations (25+ people)
+
+- **Enterprise Plan**: $399/user/month
+- Unlimited everything + custom integrations
+- Dedicated account manager
+
+### For Performance-Based Businesses
+
+- **Revenue Share**: 2-3% of generated revenue
+- Zero upfront costs
+- We succeed when you succeed
+
+### For Seasonal Businesses
+
+- **Usage-Based**: $49-$499 base + usage fees
+- Pay only for what you use
+- Perfect for weather-dependent operations
+
+---
+
+**Ready to transform your storm restoration business?**
+
+[🎯 Schedule Demo](https://buildflow.com/demo) | [💰 View Pricing](https://buildflow.com/pricing) | [🚀 Explore Features](https://buildflow.com/features)
+
+_Built with ❤️ by contractors, for contractors._
