@@ -28,13 +28,13 @@ export default function ProblemSection() {
     {
       title: "No Storm-Specific Workflows",
       description:
-        "Generic software doesn't understand the unique needs of storm restoration and construction companies.",
+        "Generic software doesn&apos;t understand the unique needs of storm restoration and construction companies.",
       icon: "storm",
     },
     {
       title: "Missed Insights & Intelligence",
       description:
-        "Without AI capabilities, you're making decisions based on incomplete information and missing opportunities.",
+        "Without AI capabilities, you&apos;re making decisions based on incomplete information and missing opportunities.",
       icon: "ai",
     },
   ];
@@ -69,7 +69,7 @@ export default function ProblemSection() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Construction companies are struggling with outdated, disconnected
-              software that wasn't built for their specific needs.
+              software that wasn&apos;t built for their specific needs.
             </p>
           </motion.div>
 
@@ -120,7 +120,8 @@ export default function ProblemSection() {
               Your Current Tech Stack
             </h3>
             <p className="text-gray-400">
-              A chaotic mess of disconnected apps that don't talk to each other.
+              A chaotic mess of disconnected apps that don&apos;t talk to each
+              other.
             </p>
           </motion.div>
 
@@ -142,7 +143,7 @@ export default function ProblemSection() {
                 className="bg-black/80 backdrop-blur-sm p-6 rounded-xl border border-red-800 max-w-md text-center"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  There's a Better Way
+                  There&apos;s a Better Way
                 </h3>
                 <p className="text-gray-300">
                   One intelligent platform that connects everything you need to

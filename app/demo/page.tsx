@@ -9,17 +9,12 @@ import {
   FiUsers,
   FiHome,
   FiTrendingUp,
-  FiDollarSign,
   FiClock,
-  FiMail,
-  FiPhone,
-  FiMapPin,
   FiCheckCircle,
   FiArrowRight,
   FiStar,
   FiTarget,
   FiAward,
-  FiPlayCircle,
 } from "react-icons/fi";
 
 export default function DemoPage() {

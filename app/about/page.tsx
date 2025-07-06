@@ -18,7 +18,6 @@ import {
   FiCheckCircle,
   FiArrowRight,
   FiClock,
-  FiDollarSign,
   FiShield,
 } from "react-icons/fi";
 
