@@ -23,6 +23,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+  /* Prevent horizontal scrolling on mobile */
+  overflow-x: hidden;
 }
 
 .dark {
@@ -39,6 +41,25 @@ body {
   .text-pretty {
     text-wrap: pretty;
   }
+
+  /* Mobile-optimized touch targets */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Prevent text scaling on mobile */
+  .no-text-scale {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* Mobile-friendly scrolling */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 .gradient-text {
@@ -54,5 +75,91 @@ body {
 }
 
 .section {
-  @apply py-16 md:py-24;
+  @apply py-12 sm:py-16 md:py-24;
+}
+
+/* Button styles with mobile optimization */
+.btn {
+  @apply inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 rounded-full font-medium transition-all duration-300 text-center touch-target;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:shadow-lg hover:scale-105 active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-white/10 text-white border border-white/20 backdrop-blur-sm hover:bg-white/20 active:bg-white/30;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  /* Reduce large text on mobile */
+  .hero-text {
+    font-size: 2rem !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Ensure proper spacing on mobile */
+  .mobile-spacing {
+    @apply space-y-4;
+  }
+
+  /* Mobile-friendly grid adjustments */
+  .mobile-grid {
+    @apply grid-cols-1 gap-4;
+  }
+
+  /* Mobile card padding */
+  .mobile-card {
+    @apply p-4;
+  }
+
+  /* Mobile text sizing */
+  .mobile-text-sm {
+    @apply text-sm;
+  }
+
+  .mobile-text-base {
+    @apply text-base;
+  }
+
+  .mobile-text-lg {
+    @apply text-lg;
+  }
+
+  /* Mobile button adjustments */
+  .mobile-btn {
+    @apply w-full py-4 text-base;
+  }
+}
+
+/* Improve touch scrolling on iOS */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent zoom on form inputs on iOS */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea,
+select {
+  font-size: 16px !important;
+}
+
+/* Mobile-friendly modal/overlay */
+.mobile-overlay {
+  @apply fixed inset-0 bg-black/90 backdrop-blur-sm z-50;
+}
+
+/* Improve tap targets on mobile */
+@media (hover: none) and (pointer: coarse) {
+  .hover\:scale-105:hover {
+    transform: scale(1.02);
+  }
+
+  .hover\:bg-gray-700:hover {
+    background-color: rgb(55 65 81);
+  }
 }

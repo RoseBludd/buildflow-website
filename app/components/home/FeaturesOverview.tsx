@@ -295,11 +295,11 @@ export default function FeaturesOverview() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
               <span className="text-white">Introducing </span>
               <span className="gradient-text primary-gradient">BuildFlow</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
               The complete AI-powered platform replacing your scattered tools
               with an intelligent, connected system built specifically for storm
               restoration and construction companies.
@@ -307,19 +307,19 @@ export default function FeaturesOverview() {
           </motion.div>
 
           {/* Feature selector */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 mb-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3 sm:gap-4 mb-8 sm:mb-10">
             {features.map((feature) => (
               <button
                 key={feature.id}
                 onClick={() => setActiveFeature(feature.id)}
-                className={`p-4 rounded-xl transition-all duration-300 flex flex-col items-center text-center gap-2 ${
+                className={`p-3 sm:p-4 rounded-xl transition-all duration-300 flex flex-col items-center text-center gap-2 touch-target ${
                   activeFeature === feature.id
                     ? `bg-gradient-to-br ${feature.color} text-white shadow-lg scale-105`
                     : "bg-gray-800/50 hover:bg-gray-800 text-gray-300"
                 }`}
               >
                 <div
-                  className={`w-12 h-12 rounded-full flex items-center justify-center ${
+                  className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center ${
                     activeFeature === feature.id
                       ? "bg-white/20"
                       : `bg-gradient-to-br ${feature.color} bg-opacity-10`
@@ -327,7 +327,9 @@ export default function FeaturesOverview() {
                 >
                   {feature.icon}
                 </div>
-                <span className="font-medium text-sm">{feature.name}</span>
+                <span className="font-medium text-xs sm:text-sm">
+                  {feature.name}
+                </span>
               </button>
             ))}
           </div>
@@ -339,7 +341,7 @@ export default function FeaturesOverview() {
             animate="animate"
             exit="exit"
             variants={fadeInVariants}
-            className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-6 md:p-8 overflow-hidden relative"
+            className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-4 sm:p-6 md:p-8 overflow-hidden relative mobile-card"
           >
             <div
               className="absolute top-0 right-0 w-full h-1 bg-gradient-to-r rounded-t-2xl opacity-40"
@@ -350,17 +352,17 @@ export default function FeaturesOverview() {
               }}
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
               <div>
                 <div
                   className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${selectedFeature.color} mb-6`}
                 >
                   {selectedFeature.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
                   {selectedFeature.name}
                 </h3>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
                   {selectedFeature.description}
                 </p>
 

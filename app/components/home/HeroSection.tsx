@@ -400,14 +400,14 @@ export default function HeroSection() {
   const numParticles = 10; // Reduced from 20
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-16 sm:pt-20">
       {/* Animated background - only render on client */}
       {isClient && (
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-900/20 to-purple-900/20" />
 
-          {/* Grid lines */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:100px_100px]" />
+          {/* Grid lines - smaller on mobile */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:50px_50px] sm:bg-[size:100px_100px]" />
 
           {/* Storm cloud to dashboard transformation */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -1005,7 +1005,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 tracking-tight hero-text">
               <span className="text-white">Storm Response Management for </span>
               <span className="gradient-text primary-gradient">
                 Construction Success
@@ -1017,7 +1017,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
+            className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto"
           >
             BuildFlow delivers real-time storm tracking, automated lead
             generation, and crew coordination in one powerful platform that
@@ -1029,17 +1029,17 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-col sm:flex-row justify-center gap-4 mt-8"
+            className="flex flex-col sm:flex-row justify-center gap-4 mt-6 sm:mt-8 mobile-spacing"
           >
             <Link
               href="/demo"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:opacity-90 transition-opacity flex items-center justify-center"
+              className="btn btn-primary mobile-btn flex items-center justify-center"
             >
               See it in action <FiArrowRight className="ml-2" />
             </Link>
             <Link
               href="/features"
-              className="bg-white/10 text-white border border-white/20 backdrop-blur-sm px-8 py-4 rounded-full text-lg font-medium hover:bg-white/20 transition-colors flex items-center justify-center"
+              className="btn btn-secondary mobile-btn flex items-center justify-center"
             >
               Explore features
             </Link>
@@ -1050,10 +1050,10 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="relative mt-16 mx-auto max-w-4xl mb-20"
+            className="relative mt-12 sm:mt-16 mx-auto max-w-4xl mb-12 sm:mb-20"
           >
             <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-1 rounded-xl shadow-2xl">
-              <div className="bg-gray-900 rounded-lg p-3">
+              <div className="bg-gray-900 rounded-lg p-2 sm:p-3">
                 <div className="flex items-center justify-between border-b border-gray-800 pb-3 px-2">
                   <div className="flex space-x-2">
                     <div className="w-3 h-3 bg-red-500 rounded-full"></div>

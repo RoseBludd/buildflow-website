@@ -413,13 +413,13 @@ export default function PricingPage() {
             variants={fadeInVariants}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6 hero-text">
               <span className="text-white">Choose Your </span>
               <span className="gradient-text primary-gradient">
                 Growth Strategy
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">
               Multiple pricing models designed for storm restoration companies.
               From startups to enterprise - find the perfect fit for your
               business.
@@ -461,12 +461,12 @@ export default function PricingPage() {
           </motion.div>
 
           {/* Tab Navigation */}
-          <div className="flex flex-wrap justify-center gap-2 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 mb-8 sm:mb-12">
             {pricingTabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl transition-all duration-300 ${
+                className={`flex items-center gap-2 px-4 sm:px-6 py-3 rounded-xl transition-all duration-300 touch-target text-sm sm:text-base ${
                   activeTab === tab.id
                     ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
                     : "bg-gray-800 text-gray-300 hover:bg-gray-700"
@@ -484,7 +484,7 @@ export default function PricingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className={`grid gap-8 ${
+            className={`grid gap-6 sm:gap-8 ${
               getCurrentPlans().length === 2
                 ? "grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto"
                 : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
@@ -493,7 +493,7 @@ export default function PricingPage() {
             {getCurrentPlans().map((plan, index) => (
               <div
                 key={index}
-                className={`relative bg-gradient-to-br from-gray-900 to-black border rounded-2xl p-6 ${
+                className={`relative bg-gradient-to-br from-gray-900 to-black border rounded-2xl p-4 sm:p-6 mobile-card ${
                   plan.popular
                     ? "border-blue-500 shadow-blue-500/20 shadow-2xl"
                     : "border-gray-800"
@@ -537,7 +537,7 @@ export default function PricingPage() {
                 </div>
 
                 <button
-                  className={`w-full py-3 px-6 rounded-xl font-medium transition-all duration-300 ${
+                  className={`w-full py-3 px-6 rounded-xl font-medium transition-all duration-300 touch-target ${
                     plan.popular
                       ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg"
                       : "bg-gray-800 text-white hover:bg-gray-700"

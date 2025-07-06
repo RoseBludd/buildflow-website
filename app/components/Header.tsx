@@ -36,17 +36,14 @@ export default function Header() {
           <NavLink href="/pricing">Pricing</NavLink>
           <NavLink href="/demo">Demo</NavLink>
           <NavLink href="/about">About</NavLink>
-          <NavLink
-            href="/demo"
-            className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-5 py-2 rounded-full hover:opacity-90 transition-opacity"
-          >
+          <NavLink href="/demo" className="btn btn-primary px-5 py-2">
             Get Started
           </NavLink>
         </nav>
 
         {/* Mobile Navigation Toggle */}
         <button
-          className="md:hidden text-white p-2"
+          className="md:hidden text-white p-3 touch-target"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
@@ -57,13 +54,13 @@ export default function Header() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              className="fixed inset-0 bg-black flex flex-col pt-20 px-8 md:hidden z-40"
+              className="mobile-overlay flex flex-col pt-20 px-6 md:hidden"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="flex flex-col space-y-6 items-center">
+              <div className="flex flex-col space-y-6 items-center mobile-spacing">
                 <MobileNavLink href="/" onClick={() => setIsMenuOpen(false)}>
                   Home
                 </MobileNavLink>
@@ -94,7 +91,7 @@ export default function Header() {
                 <MobileNavLink
                   href="/demo"
                   onClick={() => setIsMenuOpen(false)}
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full w-full text-center"
+                  className="btn btn-primary mobile-btn"
                 >
                   Get Started
                 </MobileNavLink>
@@ -141,7 +138,7 @@ function MobileNavLink({
     <Link
       href={href}
       onClick={onClick}
-      className={`text-xl text-gray-300 hover:text-white transition-colors w-full text-center ${className}`}
+      className={`text-xl text-gray-300 hover:text-white transition-colors w-full text-center touch-target py-3 ${className}`}
     >
       {children}
     </Link>
