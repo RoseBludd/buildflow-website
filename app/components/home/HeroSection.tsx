@@ -117,15 +117,18 @@ export default function HeroSection() {
   const center = { lat: 33.0, lng: -87.0 };
 
   // Storm path coordinates (more visible path across southern US)
-  const stormPath = [
-    { lat: 30.5, lng: -97.0 }, // Austin area
-    { lat: 30.2, lng: -93.5 }, // Lake Charles area
-    { lat: 30.4, lng: -90.1 }, // New Orleans area
-    { lat: 30.7, lng: -87.2 }, // Mobile area
-    { lat: 31.2, lng: -84.5 }, // Southwest GA
-    { lat: 32.5, lng: -81.5 }, // Central GA
-    { lat: 33.8, lng: -78.9 }, // Myrtle Beach area
-  ];
+  const stormPath = useMemo(
+    () => [
+      { lat: 30.5, lng: -97.0 }, // Austin area
+      { lat: 30.2, lng: -93.5 }, // Lake Charles area
+      { lat: 30.4, lng: -90.1 }, // New Orleans area
+      { lat: 30.7, lng: -87.2 }, // Mobile area
+      { lat: 31.2, lng: -84.5 }, // Southwest GA
+      { lat: 32.5, lng: -81.5 }, // Central GA
+      { lat: 33.8, lng: -78.9 }, // Myrtle Beach area
+    ],
+    []
+  );
 
   const mapOptions = {
     disableDefaultUI: true,
@@ -209,6 +212,7 @@ export default function HeroSection() {
 
   // Use refs for persistent values across renders
   const stormPath_ref = useRef(stormPath);
+  stormPath_ref.current = stormPath;
 
   // Map instances reference for Google Maps API
   const mapRef = useRef<GoogleMapInstance | null>(null);
@@ -377,7 +381,6 @@ export default function HeroSection() {
   }, [
     isLoaded,
     loadError,
-    stormPosition,
     center,
     onMapLoad,
     onMapUnmount,
