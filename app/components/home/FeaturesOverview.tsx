@@ -312,7 +312,7 @@ export default function FeaturesOverview() {
               <button
                 key={feature.id}
                 onClick={() => setActiveFeature(feature.id)}
-                className={`p-3 sm:p-4 rounded-xl transition-all duration-300 flex flex-col items-center text-center gap-2 touch-target ${
+                className={`p-3 sm:p-4 rounded-xl transition-all duration-300 flex flex-col items-center text-center gap-2 min-h-[44px] ${
                   activeFeature === feature.id
                     ? `bg-gradient-to-br ${feature.color} text-white shadow-lg scale-105`
                     : "bg-gray-800/50 hover:bg-gray-800 text-gray-300"

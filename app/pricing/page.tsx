@@ -466,7 +466,7 @@ export default function PricingPage() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-4 sm:px-6 py-3 rounded-xl transition-all duration-300 touch-target text-sm sm:text-base ${
+                className={`flex items-center gap-2 px-4 sm:px-6 py-3 rounded-xl transition-all duration-300 min-h-[44px] text-sm sm:text-base ${
                   activeTab === tab.id
                     ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
                     : "bg-gray-800 text-gray-300 hover:bg-gray-700"
@@ -537,7 +537,7 @@ export default function PricingPage() {
                 </div>
 
                 <button
-                  className={`w-full py-3 px-6 rounded-xl font-medium transition-all duration-300 touch-target ${
+                  className={`w-full py-3 px-6 rounded-xl font-medium transition-all duration-300 min-h-[44px] ${
                     plan.popular
                       ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg"
                       : "bg-gray-800 text-white hover:bg-gray-700"

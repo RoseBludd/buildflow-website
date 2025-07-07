@@ -41,54 +41,69 @@ body {
   .text-pretty {
     text-wrap: pretty;
   }
-
-  /* Mobile-optimized touch targets */
-  .touch-target {
-    @apply min-h-[44px] min-w-[44px];
-  }
-
-  /* Prevent text scaling on mobile */
-  .no-text-scale {
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
-
-  /* Mobile-friendly scrolling */
-  .scroll-smooth {
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-  }
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
 .primary-gradient {
-  @apply from-blue-500 to-purple-600;
-}
-
-.container-padding {
-  @apply px-4 sm:px-6 lg:px-8;
-}
-
-.section {
-  @apply py-12 sm:py-16 md:py-24;
+  --tw-gradient-from: #3b82f6;
+  --tw-gradient-to: #9333ea;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 /* Button styles with mobile optimization */
 .btn {
-  @apply inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 rounded-full font-medium transition-all duration-300 text-center touch-target;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+@media (min-width: 640px) {
+  .btn {
+    padding: 1rem 2rem;
+  }
 }
 
 .btn-primary {
-  @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:shadow-lg hover:scale-105 active:scale-95;
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
 }
 
 .btn-secondary {
-  @apply bg-white/10 text-white border border-white/20 backdrop-blur-sm hover:bg-white/20 active:bg-white/30;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(16px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:active {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* Mobile-specific improvements */
@@ -99,37 +114,16 @@ body {
     line-height: 1.1 !important;
   }
 
-  /* Ensure proper spacing on mobile */
-  .mobile-spacing {
-    @apply space-y-4;
-  }
-
-  /* Mobile-friendly grid adjustments */
-  .mobile-grid {
-    @apply grid-cols-1 gap-4;
+  /* Mobile button adjustments */
+  .mobile-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
   }
 
   /* Mobile card padding */
   .mobile-card {
-    @apply p-4;
-  }
-
-  /* Mobile text sizing */
-  .mobile-text-sm {
-    @apply text-sm;
-  }
-
-  .mobile-text-base {
-    @apply text-base;
-  }
-
-  .mobile-text-lg {
-    @apply text-lg;
-  }
-
-  /* Mobile button adjustments */
-  .mobile-btn {
-    @apply w-full py-4 text-base;
+    padding: 1rem;
   }
 }
 
@@ -150,7 +144,14 @@ select {
 
 /* Mobile-friendly modal/overlay */
 .mobile-overlay {
-  @apply fixed inset-0 bg-black/90 backdrop-blur-sm z-50;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(16px);
+  z-index: 50;
 }
 
 /* Improve tap targets on mobile */

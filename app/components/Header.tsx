@@ -43,7 +43,7 @@ export default function Header() {
 
         {/* Mobile Navigation Toggle */}
         <button
-          className="md:hidden text-white p-3 touch-target"
+          className="md:hidden text-white p-3 min-h-[44px] min-w-[44px]"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
@@ -60,7 +60,7 @@ export default function Header() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="flex flex-col space-y-6 items-center mobile-spacing">
+              <div className="flex flex-col space-y-6 items-center">
                 <MobileNavLink href="/" onClick={() => setIsMenuOpen(false)}>
                   Home
                 </MobileNavLink>
@@ -138,7 +138,7 @@ function MobileNavLink({
     <Link
       href={href}
       onClick={onClick}
-      className={`text-xl text-gray-300 hover:text-white transition-colors w-full text-center touch-target py-3 ${className}`}
+      className={`text-xl text-gray-300 hover:text-white transition-colors w-full text-center min-h-[44px] py-3 ${className}`}
     >
       {children}
     </Link>
